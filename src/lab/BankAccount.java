@@ -13,7 +13,11 @@ public class BankAccount {
      */
     public void withdraw(int amount) {
         // TODO: amount <= 0  -> throw IllegalArgumentException  (input ภายนอก = exception)
+        if(amount <= 0) throw new IllegalArgumentException("arr must <+ 0");
         // TODO: assert amount <= balance                        (เงื่อนไขภายใน = assert)
+        assert amount <= balance;
         // TODO: balance ลดลงเท่ากับ amount
+        balance-=amount;
+
     }
 }
